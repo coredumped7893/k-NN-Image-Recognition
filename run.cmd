@@ -1,0 +1,1 @@
+java -jar target/APO2020EGZ-1.0-SNAPSHOT-jar-with-dependencies.jar

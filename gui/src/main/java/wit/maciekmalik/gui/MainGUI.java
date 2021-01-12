@@ -5,6 +5,8 @@
  */
 package wit.maciekmalik.gui;
 
+import javax.swing.JDesktopPane;
+
 /**
  *
  * @author Maciek Malik
@@ -27,40 +29,585 @@ public class MainGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenu1 = new javax.swing.JMenu();
         jButton1 = new javax.swing.JButton();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        jPModel = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jLObjList = new javax.swing.JList<>();
+        jTUpperInfo = new javax.swing.JTextField();
+        jBAddObject = new javax.swing.JButton();
+        jPObjPreview = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTMoments = new javax.swing.JTextArea();
+        jTextField1 = new javax.swing.JTextField();
+        jCXType = new javax.swing.JComboBox<>();
+        jCYType = new javax.swing.JComboBox<>();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLClass = new javax.swing.JLabel();
+        jBDelete = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        jPClass = new javax.swing.JPanel();
+        jTUpperInfo1 = new javax.swing.JTextField();
+        jBAddObject1 = new javax.swing.JButton();
+        jPObjPreview1 = new javax.swing.JPanel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jTMoments1 = new javax.swing.JTextArea();
+        jLabel5 = new javax.swing.JLabel();
+        jLClass1 = new javax.swing.JLabel();
+        jPChart = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        jCKValue = new javax.swing.JComboBox<>();
+        jLabel7 = new javax.swing.JLabel();
+        jCMetrics = new javax.swing.JComboBox<>();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        jTMetrics = new javax.swing.JTextPane();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jLObjList1 = new javax.swing.JList<>();
+        jLabel3 = new javax.swing.JLabel();
+        jBDelete1 = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu2 = new javax.swing.JMenu();
+        jMNew = new javax.swing.JMenuItem();
+        jMLoadModel = new javax.swing.JMenuItem();
+        jMSaveModel = new javax.swing.JMenuItem();
+        jSeparator1 = new javax.swing.JPopupMenu.Separator();
+        jMExit = new javax.swing.JMenuItem();
+        jMenu4 = new javax.swing.JMenu();
+        jMModel = new javax.swing.JMenuItem();
+        jMClass = new javax.swing.JMenuItem();
+        jMAbout = new javax.swing.JMenu();
+
+        jMenu1.setText("jMenu1");
+
+        jButton1.setText("jButton1");
+
+        jMenuItem1.setText("jMenuItem1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("k-NN v0.1");
 
-        jButton1.setText("Wczytaj Model");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+        jTabbedPane1.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jTabbedPane1StateChanged(evt);
             }
         });
+
+        jLObjList.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jLObjList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        jLObjList.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
+            public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
+                jLObjListValueChanged(evt);
+            }
+        });
+        jScrollPane1.setViewportView(jLObjList);
+
+        jTUpperInfo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTUpperInfo.setText("Wybierz obiekt z listy na lewo");
+        jTUpperInfo.setFocusable(false);
+
+        jBAddObject.setText("+ Dodaj obiekt");
+        jBAddObject.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBAddObjectActionPerformed(evt);
+            }
+        });
+
+        jPObjPreview.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPObjPreview.setMaximumSize(new java.awt.Dimension(150, 150));
+
+        javax.swing.GroupLayout jPObjPreviewLayout = new javax.swing.GroupLayout(jPObjPreview);
+        jPObjPreview.setLayout(jPObjPreviewLayout);
+        jPObjPreviewLayout.setHorizontalGroup(
+            jPObjPreviewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPObjPreviewLayout.setVerticalGroup(
+            jPObjPreviewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        jTMoments.setEditable(false);
+        jTMoments.setColumns(20);
+        jTMoments.setRows(5);
+        jScrollPane2.setViewportView(jTMoments);
+
+        jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField1.setText("Klasyfikuj na podstawie:");
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+
+        jCXType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dodaj Obiekty", "---", "---" }));
+        jCXType.setEnabled(false);
+        jCXType.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCXTypeActionPerformed(evt);
+            }
+        });
+
+        jCYType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dodaj Obiekty", "---", "---" }));
+        jCYType.setEnabled(false);
+        jCYType.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCYTypeActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setText("Oś X:");
+
+        jLabel2.setText("Oś Y:");
+
+        jLabel4.setText("Klasa:");
+
+        jLClass.setText("KWADRAT");
+
+        jBDelete.setText("Usuń");
+        jBDelete.setEnabled(false);
+        jBDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBDeleteActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPModelLayout = new javax.swing.GroupLayout(jPModel);
+        jPModel.setLayout(jPModelLayout);
+        jPModelLayout.setHorizontalGroup(
+            jPModelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPModelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPModelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jBDelete))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPModelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTUpperInfo)
+                    .addComponent(jTextField1)
+                    .addGroup(jPModelLayout.createSequentialGroup()
+                        .addGroup(jPModelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPModelLayout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addGap(18, 18, 18)
+                                .addComponent(jCXType, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPModelLayout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addGap(18, 18, 18)
+                                .addComponent(jCYType, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jBAddObject, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPModelLayout.createSequentialGroup()
+                                .addComponent(jPObjPreview, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPModelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(jPModelLayout.createSequentialGroup()
+                                        .addComponent(jLabel4)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLClass, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jScrollPane2))))
+                        .addGap(0, 441, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        jPModelLayout.setVerticalGroup(
+            jPModelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPModelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPModelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPModelLayout.createSequentialGroup()
+                        .addComponent(jBAddObject)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTUpperInfo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPModelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPObjPreview, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPModelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel4)
+                            .addComponent(jLClass))
+                        .addGap(18, 18, 18)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(jPModelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1)
+                            .addComponent(jCXType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPModelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel2)
+                            .addComponent(jCYType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 99, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1))
+                .addGap(18, 18, 18)
+                .addComponent(jBDelete)
+                .addGap(117, 117, 117))
+        );
+
+        jTabbedPane1.addTab("Model", jPModel);
+
+        jTUpperInfo1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTUpperInfo1.setText("Wybierz obiekt z listy na lewo/Statystyki dla obiektu: aaa111.jpg");
+        jTUpperInfo1.setFocusable(false);
+
+        jBAddObject1.setText("+ Dodaj obiekt");
+        jBAddObject1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBAddObject1ActionPerformed(evt);
+            }
+        });
+
+        jPObjPreview1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPObjPreview1.setMaximumSize(new java.awt.Dimension(150, 150));
+
+        javax.swing.GroupLayout jPObjPreview1Layout = new javax.swing.GroupLayout(jPObjPreview1);
+        jPObjPreview1.setLayout(jPObjPreview1Layout);
+        jPObjPreview1Layout.setHorizontalGroup(
+            jPObjPreview1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPObjPreview1Layout.setVerticalGroup(
+            jPObjPreview1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        jTMoments1.setEditable(false);
+        jTMoments1.setColumns(20);
+        jTMoments1.setRows(5);
+        jTMoments1.setText("---");
+        jScrollPane5.setViewportView(jTMoments1);
+
+        jLabel5.setText("Nowa Klasa:");
+
+        jLClass1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLClass1.setText("KWADRAT");
+
+        jPChart.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        javax.swing.GroupLayout jPChartLayout = new javax.swing.GroupLayout(jPChart);
+        jPChart.setLayout(jPChartLayout);
+        jPChartLayout.setHorizontalGroup(
+            jPChartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jPChartLayout.setVerticalGroup(
+            jPChartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        jLabel6.setText("liczba K:");
+
+        jCKValue.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1-NN", "2-NN", "3-NN", "4-NN", "5-NN", "6-NN" }));
+        jCKValue.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCKValueActionPerformed(evt);
+            }
+        });
+
+        jLabel7.setText("Metryka:");
+
+        jCMetrics.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Euclides", "Chebyshev" }));
+        jCMetrics.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCMetricsActionPerformed(evt);
+            }
+        });
+
+        jTMetrics.setEditable(false);
+        jScrollPane7.setViewportView(jTMetrics);
+
+        javax.swing.GroupLayout jPClassLayout = new javax.swing.GroupLayout(jPClass);
+        jPClass.setLayout(jPClassLayout);
+        jPClassLayout.setHorizontalGroup(
+            jPClassLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPClassLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPClassLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPChart, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jTUpperInfo1)
+                    .addGroup(jPClassLayout.createSequentialGroup()
+                        .addComponent(jPObjPreview1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane7))
+                    .addGroup(jPClassLayout.createSequentialGroup()
+                        .addGroup(jPClassLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPClassLayout.createSequentialGroup()
+                                .addComponent(jBAddObject1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jCKValue, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel7)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jCMetrics, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPClassLayout.createSequentialGroup()
+                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLClass1, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 171, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        jPClassLayout.setVerticalGroup(
+            jPClassLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPClassLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPClassLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jBAddObject1)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jCKValue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7)
+                    .addComponent(jCMetrics, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTUpperInfo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPClassLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPClassLayout.createSequentialGroup()
+                        .addGroup(jPClassLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPObjPreview1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE))
+                        .addGap(21, 21, 21))
+                    .addComponent(jScrollPane7))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPClassLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(jLClass1))
+                .addGap(18, 18, 18)
+                .addComponent(jPChart, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jLObjList1.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jLObjList1.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
+            public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
+                jLObjList1ValueChanged(evt);
+            }
+        });
+        jScrollPane4.setViewportView(jLObjList1);
+
+        jLabel3.setText("Lista obiektów");
+
+        jBDelete1.setText("Usuń");
+        jBDelete1.setEnabled(false);
+        jBDelete1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBDelete1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jBDelete1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPClass, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 670, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jBDelete1)
+                .addGap(0, 65, Short.MAX_VALUE))
+            .addComponent(jPClass, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        jTabbedPane1.addTab("Klasyfikacja", jPanel2);
+
+        jLabel8.setFont(new java.awt.Font("Dialog", 0, 10)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel8.setText("v0.5 Maciek Malik 2020");
+
+        jMenu2.setText("Plik");
+
+        jMNew.setText("Nowy");
+        jMNew.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMNewActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMNew);
+
+        jMLoadModel.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.CTRL_MASK));
+        jMLoadModel.setText("Wczytaj model");
+        jMLoadModel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMLoadModelActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMLoadModel);
+
+        jMSaveModel.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_MASK));
+        jMSaveModel.setText("Zapisz model");
+        jMSaveModel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMSaveModelActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMSaveModel);
+        jMenu2.add(jSeparator1);
+
+        jMExit.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_X, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        jMExit.setText("Wyjście");
+        jMExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMExitActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMExit);
+
+        jMenuBar1.add(jMenu2);
+
+        jMenu4.setText("Widok");
+
+        jMModel.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.CTRL_MASK));
+        jMModel.setText("Model/Zbiór uczący");
+        jMModel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMModelActionPerformed(evt);
+            }
+        });
+        jMenu4.add(jMModel);
+
+        jMClass.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_D, java.awt.event.InputEvent.CTRL_MASK));
+        jMClass.setText("Klasyfikacja obiektów");
+        jMClass.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMClassActionPerformed(evt);
+            }
+        });
+        jMenu4.add(jMClass);
+
+        jMenuBar1.add(jMenu4);
+
+        jMAbout.setText("O Programie");
+        jMAbout.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMAboutMouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(jMAbout);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jTabbedPane1)
             .addGroup(layout.createSequentialGroup()
-                .addGap(155, 155, 155)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(620, Short.MAX_VALUE))
+                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(124, 124, 124)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(507, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jTabbedPane1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel8))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jMModelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMModelActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jMModelActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jCXTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCXTypeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCXTypeActionPerformed
+
+    private void jCYTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCYTypeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCYTypeActionPerformed
+
+    private void jBAddObjectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBAddObjectActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBAddObjectActionPerformed
+
+    private void jBAddObject1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBAddObject1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBAddObject1ActionPerformed
+
+    private void jTabbedPane1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jTabbedPane1StateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTabbedPane1StateChanged
+
+    private void jLObjListValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_jLObjListValueChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLObjListValueChanged
+
+    private void jLObjList1ValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_jLObjList1ValueChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLObjList1ValueChanged
+
+    private void jMClassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMClassActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMClassActionPerformed
+
+    private void jMLoadModelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMLoadModelActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMLoadModelActionPerformed
+
+    private void jMSaveModelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMSaveModelActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMSaveModelActionPerformed
+
+    private void jMExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMExitActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMExitActionPerformed
+
+    private void jMAboutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMAboutMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMAboutMouseClicked
+
+    private void jBDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBDeleteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBDeleteActionPerformed
+
+    private void jBDelete1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBDelete1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBDelete1ActionPerformed
+
+    private void jMNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMNewActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMNewActionPerformed
+
+    private void jCKValueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCKValueActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCKValueActionPerformed
+
+    private void jCMetricsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCMetricsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCMetricsActionPerformed
 
     /**
      * @param args the command line arguments
@@ -98,6 +645,57 @@ public class MainGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jBAddObject;
+    private javax.swing.JButton jBAddObject1;
+    private javax.swing.JButton jBDelete;
+    private javax.swing.JButton jBDelete1;
     private javax.swing.JButton jButton1;
+    private javax.swing.JComboBox<String> jCKValue;
+    private javax.swing.JComboBox<String> jCMetrics;
+    private javax.swing.JComboBox<String> jCXType;
+    private javax.swing.JComboBox<String> jCYType;
+    private javax.swing.JLabel jLClass;
+    private javax.swing.JLabel jLClass1;
+    private javax.swing.JList<String> jLObjList;
+    private javax.swing.JList<String> jLObjList1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JMenu jMAbout;
+    private javax.swing.JMenuItem jMClass;
+    private javax.swing.JMenuItem jMExit;
+    private javax.swing.JMenuItem jMLoadModel;
+    private javax.swing.JMenuItem jMModel;
+    private javax.swing.JMenuItem jMNew;
+    private javax.swing.JMenuItem jMSaveModel;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JPanel jPChart;
+    private javax.swing.JPanel jPClass;
+    private javax.swing.JPanel jPModel;
+    private javax.swing.JPanel jPObjPreview;
+    private javax.swing.JPanel jPObjPreview1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JPopupMenu.Separator jSeparator1;
+    private javax.swing.JTextPane jTMetrics;
+    private javax.swing.JTextArea jTMoments;
+    private javax.swing.JTextArea jTMoments1;
+    private javax.swing.JTextField jTUpperInfo;
+    private javax.swing.JTextField jTUpperInfo1;
+    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
